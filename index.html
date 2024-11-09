@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro de Reparación y Diagnóstico Automotriz - Mecánica Total">
+    <title>Mecánica Total</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/mecanica.ico" type="image/x-icon">
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff !important;
+        }
+        .nav-link {
+            color: #fff !important;
+            margin-right: 15px;
+        }
+        .hero {
+            background-image: url('img/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .flip-box-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .flip-box {
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+        }
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-box-front, .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .flip-box-front {
+            background-color: #007bff;
+            color: white;
+        }
+        .flip-box-back {
+            background-color: #fff;
+            color: #007bff;
+            transform: rotateY(180deg);
+        }
+        .carousel-item img {
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .benefits-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .benefit-box {
+            text-align: center;
+            padding: 20px;
+        }
+        .benefit-box img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+        }
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Mecánica Total</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#benefits">Beneficios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Reseñas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Bienvenidos a Mecánica Total</h1>
+            <p>Expertos en reparación y diagnóstico automotriz</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container my-5">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="flip-boxes-container">
+            <!-- Primera Flip Box -->
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>Diagnóstico de Motores</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Identificación y reparación precisa de problemas en el motor para un desempeño óptimo.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Segunda Flip Box -->
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>Hojalatería y Pintura</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Restauramos el aspecto de tu auto con acabados de alta calidad y durabilidad.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tercera Flip Box -->
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>Mantenimiento Preventivo</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Cuida tu vehículo con mantenimientos regulares para evitar averías futuras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+            <div class="row">
+                <div class="col-md-4 benefit-box">
+                    <img src="img/experience.png" alt="Experiencia">
+                    <h4>Experiencia</h4>
+                    <p>Más de 20 años en el mercado brindando soluciones automotrices de calidad.</p>
+                </div>
+                <div class="col-md-4 benefit-box">
+                    <img src="img/quality.png" alt="Calidad">
+                    <h4>Calidad</h4>
+                    <p>Trabajamos con piezas originales y ofrecemos garantía en cada servicio.</p>
+                </div>
+                <div class="col-md-4 benefit-box">
+                    <img src="img/efficiency.png" alt="Eficiencia">
+                    <h4>Eficiencia</h4>
+                    <p>Servicios rápidos y efectivos para minimizar el tiempo de espera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <p>En Mecánica Total, ofrecemos un servicio confiable y profesional en diagnóstico y reparación automotriz. Nuestro equipo está capacitado para brindarte la mejor atención y mantener tu vehículo en condiciones óptimas.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="my-5">
+        <h2 class="section-title text-center">Reseñas de Nuestros Clientes</h2>
+        <div class="carousel slide" id="carouselTestimonials" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="text-center">"Excelente servicio, muy confiable y profesional." - Juan P.</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="text-center">"Repararon mi auto en tiempo récord. Muy satisfecho con el resultado." - Laura R.</p>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselTestimonials" role="button" data-slide="
